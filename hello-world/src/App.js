@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 
 import './App.css'
 
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
+import ParentComponent from './components/ParentComponent';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <FunctionClick />
-        <hr />
-        <ClassClick />
+        <ParentComponent />
       </div>
     )
   }
