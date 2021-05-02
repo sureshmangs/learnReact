@@ -1,22 +1,26 @@
 import React from 'react';
 
-/*
-function Greet(props) {
-    return <h1>Hello {props.name}</h1>
-}
-*/
+
 
 /*
-const Greet = (props) => {
-    return <h1>Hello {props.name}</h1>
-}
-*/
-
-const Greet = props => {
+const Greet = ({ name, hero, children }) => {
     return (
         <div>
-            <h1>Hello {props.name} a.k.a {props.hero}</h1>
-            {props.children}
+            <h1>Hello {name} a.k.a {hero}</h1>
+            {children}
+        </div>
+    )
+}
+*/
+
+
+
+const Greet = props => {
+    const { name, hero, children } = props;
+    return (
+        <div>
+            <h1>Hello {name} a.k.a {hero}</h1>
+            {children}
         </div>
     )
 }

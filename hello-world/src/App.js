@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 
 import './App.css'
 
-import Counter from './components/Counter'
+import Greet from './components/Greet';
+import Welcome from './components/Welcome';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter />
+        <Greet name="Bruce" hero="Batman" >
+          <p>This is a children prop</p>
+        </Greet>
+        <Greet name="Clark" hero="Superman" />
+
+        <hr />
+
+        <Welcome name="Bruce" hero="Batman">
+          <p>This is a children prop</p>
+        </Welcome>
+        <Welcome name="Clark" hero="Superman" />
       </div>
     )
   }
