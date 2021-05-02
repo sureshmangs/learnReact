@@ -2,24 +2,16 @@ import React, { Component } from 'react';
 
 import './App.css'
 
-import Greet from './components/Greet';
-import Welcome from './components/Welcome';
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Greet name="Bruce" hero="Batman" >
-          <p>This is a children prop</p>
-        </Greet>
-        <Greet name="Clark" hero="Superman" />
-
+        <FunctionClick />
         <hr />
-
-        <Welcome name="Bruce" hero="Batman">
-          <p>This is a children prop</p>
-        </Welcome>
-        <Welcome name="Clark" hero="Superman" />
+        <ClassClick />
       </div>
     )
   }
