@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 
-import Hello from './components/Hello';
+import Greet from './components/Greet';
+import Welcome from './components/Welcome';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Hello />
+        <Greet name="Bruce" hero="Batman">
+          <p>This is a children prop</p>
+        </Greet>
+        <Greet name="Clark" hero="Superman">
+          <button>Action</button>
+        </Greet>
+        <Greet name="Diana" hero="Wonder Woman" />
+
+        <Welcome name="Bruce" hero="Batman">
+          <p>This is a children prop</p>
+        </Welcome>
+        <Welcome name="Clark" hero="Superman">
+          <button>Action</button>
+        </Welcome>
+        <Welcome name="Diana" hero="Wonder Woman" />
       </div>
     )
   }
