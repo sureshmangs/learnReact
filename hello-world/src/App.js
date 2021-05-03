@@ -1,28 +1,15 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import './appStyle.css';
-import style from './appStyle.module.css';
 
-
-
-import Stylesheet from './components/Stylesheet';
-import InlineStyle from './components/InlineStyle';
+import Form from './components/Form';
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Stylesheet primary={true} />
-        <InlineStyle />
-
-        <hr />
-
-        <p className="error">Using simple stylesheet</p>
-
-        {/* Styled modules can't be used in children unknowingly as we have to import them there explicitly which is not the case with the simple style sheets */}
-        <p className={style.success}>Using module stylesheet</p>
+        <Form />
       </div>
     )
   }
