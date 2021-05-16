@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import PureComp from './PureComp';
-import RegularComp from './RegularComp';
+
+import MemoComp from './MemoComp';
+
 
 class ParentComp extends Component {
     constructor(props) {
@@ -24,24 +25,7 @@ class ParentComp extends Component {
         return (
             <div>
                 Parent Component
-                <RegularComp name={this.state.name} />
-                <PureComp name={this.state.name} />
-
-                {/* A regular component does not implement the shouldComponentUpdate method.
-                It always returns tru by default.
-
-                A pure component on the other hand implement shouldComponentUpdate with a
-                shallow prop and state comparision */}
-
-                {/* Shallow comparison
-
-                Primitive type
-                a SC b returns true if a and b are of same type and value 
-
-                Complex type
-                a SC b return true if a and b reference the exact same  object */}
-
-
+                <MemoComp name={this.state.name} />
             </div>
         )
     }
