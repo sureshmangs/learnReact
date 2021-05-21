@@ -10,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ClickCounter />
+        {/* Props will go to the HOC component from there we can pass them as props to wrapped components */}
+        <ClickCounter name="Suresh" />
         <HoverCounter />
       </div>
     )
