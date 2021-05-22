@@ -2,29 +2,17 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
-//import User from './components/User';
-import CounterTwo from './components/CounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <CounterTwo render={(count, incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount} />)} />
-        <CounterTwo render={(count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount} />} />
-
-
-        {/* Method 2 -> Can also be done in this way */}
-
-        {/* <CounterTwo>
-          {(count, incrementCount) => (<ClickCounterTwo count={count} incrementCount={incrementCount} />)}
-        </CounterTwo> */}
-
-
-        {/* Read User.js Component fro better understanding */}
-        {/* <User render={(isLoggedIn) => isLoggedIn ? "Suresh" : "Guest"} /> */}
+        <UserProvider value="Suresh">
+          <ComponentC />
+        </UserProvider>
       </div>
     )
   }
@@ -32,6 +20,13 @@ class App extends Component {
 
 export default App
 
-// Render Props
-// The term "Render Prop" refers to a technique for sharing code between
-// React Component using a propwhose value is a function
+// Context
+          //      App
+          // (A)   B     C 
+          //      (D)    E
+          //            (F) 
+          // Passing props from App to A, D, F 
+          // Here to pass props to F we also need to pass it to C and E who might not need them.
+
+// Context provides a way to pass data through the compponent tree without 
+// having to passprops down manually at every level.
