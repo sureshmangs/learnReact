@@ -13,6 +13,9 @@ class App extends Component {
         <UserProvider value="Suresh">
           <ComponentC />
         </UserProvider>
+
+        {/* default context value will be passed  */}
+        {/* <ComponentC /> */}
       </div>
     )
   }
