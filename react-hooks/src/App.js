@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
 import './App.css'
-// import ClassCounterOne from './components/ClassCounterOne';
-import HookCounterOne from './components/HookCounterOne';
+// import ClasssMouse from './components/ClasssMouse';
+import HookMouse from './components/HookMouse';
+
 
 export class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <ClassCounterOne /> */}
-        <HookCounterOne />
+        {/* <ClasssMouse /> */}
+        <HookMouse />
       </div>
     )
   }
