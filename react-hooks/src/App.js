@@ -16,8 +16,3 @@ export class App extends Component {
 }
 
 export default App
-
-// useEffect
-
-// The effect hook lets you perform side efeects in functional components
-// It's a close replacement for componentDidMount, componentDidUpdate and componentWillUnmount
