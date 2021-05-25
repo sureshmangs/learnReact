@@ -1,20 +1,14 @@
 import React from 'react';
 
 import './App.css'
-import CounterOne from './components/CounterOne';
+import CounterTwo from './components/CounterTwo';
 
 function App() {
   return (
     <div className="App">
-      <CounterOne />
+      <CounterTwo />
     </div>
   )
 }
 
 export default App
-
-// useReducer
-
-// useReducer is a hook that is used for state management
-// It is an alternative to useState
-// useState is built using useReducer
