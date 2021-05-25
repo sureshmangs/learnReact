@@ -1,21 +1,20 @@
 import React from 'react';
 
 import './App.css'
-import ComponentC from './components/ComponentC';
-
-export const UserContext = React.createContext();
-export const ChannelContext = React.createContext();
+import CounterOne from './components/CounterOne';
 
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value={"Suresh"}>
-        <ChannelContext.Provider value={"Codeevolution"}>
-          <ComponentC />
-        </ChannelContext.Provider>
-      </UserContext.Provider>
+      <CounterOne />
     </div>
   )
 }
 
 export default App
+
+// useReducer
+
+// useReducer is a hook that is used for state management
+// It is an alternative to useState
+// useState is built using useReducer
