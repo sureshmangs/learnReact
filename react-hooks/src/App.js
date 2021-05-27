@@ -1,15 +1,16 @@
 import React from 'react';
 
 import './App.css'
-import CounterOne from './components/CounterOne';
-import CounterTwo from './components/CounterTwo';
+import UserFormOne from './components/UserFormOne';
+import UserFormTwo from './components/UserFormTwo';
+
 
 
 function App() {
   return (
     <div className="App">
-      <CounterOne />
-      <CounterTwo />
+      <UserFormOne />
+      <UserFormTwo />
     </div>
   )
 }
